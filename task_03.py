@@ -71,4 +71,3 @@ if TOTAL is not None:
     print '      Total:{:>19.0f}'.format(TOTAL)
 else:
     print '      Total:{:>20}'.format(None)
-
