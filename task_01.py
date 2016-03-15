@@ -8,6 +8,6 @@ ACCENT = raw_input('''Choose accent: Ceramic Glaze, Culumbus Nimbus,
 Platnium Mist, or Spartan Sage: ''')
 HIGHLIGHT = raw_input('''Choose highlight: Bascally White, White, Off-White,
 Paper White, Bone White, Just White, Fractal White, Not White: ''')
-Choices = '{}, {}, {}'
+CHOICES = '{}, {}, {}'
 
-print 'You selected: ' + Choices.format(BASE, ACCENT, HIGHLIGHT)
+print 'You selected: ' + CHOICES.format(BASE, ACCENT, HIGHLIGHT)
