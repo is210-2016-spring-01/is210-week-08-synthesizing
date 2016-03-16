@@ -33,7 +33,7 @@ if BORROWED <= 199999:
             APR = dec.Decimal(.0639)
     else:
         pass
-elif 200000 <= BORROWED <= 9999999:
+elif 200000 <= BORROWED <= 999999:
     if LOANYEARS <= 15:
         if PREQUAL == 'Yes' or PREQUAL == 'y':
             APR = dec.Decimal(.0302)
