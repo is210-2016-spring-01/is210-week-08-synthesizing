@@ -69,11 +69,10 @@ else:
 
 TOTAL = int(round((BORROWED * ((1 + APR / 12) ** (12 * LOANYEARS)))))
 BORROWED = '${:,}'.format(BORROWED)
-TOTAL = '${:,}'.format(TOTAL)
 REPORT = TITLE + '\n'
 REPORT += INDENT + 'Principal:' + '{:>15}'.format(BORROWED) + '\n'
 REPORT += INDENT + 'Duration:' + '{:>13}'.format(LOANYEARS) + 'yrs \n'
 REPORT += INDENT + 'Pre-qualified?:' + '{:>8}'.format(PREQUAL) + '\n\n'
-REPORT += INDENT + 'Total:' + '{:>19}'.format(TOTAL)
+REPORT += INDENT + 'Total:' + '{:>19}'.format('${:,}'.format(TOTAL))
 
 print REPORT
