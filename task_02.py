@@ -9,4 +9,3 @@ SNOOZE = True if DAY == 'sat' or DAY == 'sun' or TIME < 600 else False
 
 if not SNOOZE:
     print ('BEEP! '*5).strip()
-
