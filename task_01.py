@@ -2,9 +2,11 @@
 # -*- coding: utf-8 -*-
 """A docstring to provide brnaching for decision trees."""
 
-BASE = raw_input('Which base colors are you using? ')
-BASE_CHOICE = 'I will use: {0}, {1}.'
-ACCENT = raw_input('Which accent will you use? ')
-ACCENT_CHOICE = 'I will use: {0}, {1}'
-HIGHLIGHT = raw_input('Which highlight color are you using? ')
-HIGHLIGHT_CHOICE = 'I will use: {0}, {1}.'
+
+BASE = raw_input('Which base color: Seattle Grey or Manatee: ')
+ACCENT = raw_input('Which accent color: Ceramic Glaze, Culumbus Nimbus,\
+Platinum Mist, or Spartan Sage:')
+HIGHLIGHT = raw_input('Which highlight color: Basically White, White, \
+Off-White, Paper White, Bone White, Just White, Fractal White, Not White: ')
+COLOR_CHOICE = '{}, {1}, {}'
+print 'You chose: ' + Choices.format(BASE, ACCENT, HIGHIGHT)
