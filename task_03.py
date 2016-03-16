@@ -51,7 +51,7 @@ elif 200000 <= BORROWED <= 999999:
             TOTAL = None
     else:
         TOTAL = None
-elif BORROWED <= 1000000:
+elif BORROWED >= 1000000:
     if LOANYEARS <= 15:
         if PREQUAL == 'Yes' or PREQUAL == 'y':
             APR = dec.Decimal(.0205)
