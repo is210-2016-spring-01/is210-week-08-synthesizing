@@ -14,7 +14,7 @@ TITLE = 'Loan Report for: ' + CUSTNAME + '\n' + ('-' * 35)
 INDENT = ' ' * 4
 REPORT = ''
 
-if BORROWED <= 199999:
+if 0 < BORROWED <= 199999:
     if LOANYEARS <= 15:
         if PREQUAL == 'Yes' or PREQUAL == 'y':
             APR = '.0363'
