@@ -17,62 +17,69 @@ REPORT = ''
 if BORROWED <= 199999:
     if LOANYEARS <= 15:
         if PREQUAL == 'Yes' or PREQUAL == 'y':
-            APR = dec.Decimal(.0363)
+            APR = .0363
         else:
             APR = dec.Decimal(.0465)
     elif 16 <= LOANYEARS <= 20:
         if PREQUAL == 'Yes' or PREQUAL == 'y':
-            APR = dec.Decimal(.0404)
+            APR = .0404
         else:
-            print bool(PREQUAL)
-            APR = dec.Decimal(.0498)
+            APR = .0498
     elif 21 <= LOANYEARS <= 30:
         if PREQUAL == 'Yes' or PREQUAL == 'y':
-            APR = dec.Decimal(.0577)
+            APR = .0577
         else:
-            APR = dec.Decimal(.0639)
+            APR = .0639
     else:
         pass
 elif 200000 <= BORROWED <= 999999:
     if LOANYEARS <= 15:
         if PREQUAL == 'Yes' or PREQUAL == 'y':
-            APR = dec.Decimal(.0302)
+            APR = .0302
         else:
-            APR = dec.Decimal(.0398)
+            APR = .0398
     elif 16 <= LOANYEARS <= 20:
         if PREQUAL == 'Yes' or PREQUAL == 'y':
-            APR = dec.Decimal(.0327)
+            APR = .0327
         else:
-            APR = dec.Decimal(.0408)
+            APR = .0408
     elif 21 <= LOANYEARS <= 30:
         if PREQUAL == 'Yes' or PREQUAL == 'y':
-            APR = dec.Decimal(.0466)
+            APR = .0466
         else:
-            TOTAL = None
+            APR = None
     else:
         TOTAL = None
 elif BORROWED >= 1000000:
     if LOANYEARS <= 15:
         if PREQUAL == 'Yes' or PREQUAL == 'y':
-            APR = dec.Decimal(.0205)
+            APR = .0205
         else:
             TOTAL = None
     elif 16 <= LOANYEARS <= 20:
         if PREQUAL == 'Yes' or PREQUAL == 'y':
-            APR = dec.Decimal(.0262)
+            APR = .0262
         else:
-            TOTAL = None
+            APR = None
     else:
-        TOTAL = None
+        APR = None
+else:
+    APR = None
+
+if APR is not None:
+    APR = dec.Decimal(APR)
+    TOTAL = int(round((BORROWED * ((1 + APR / 12) ** (12 * LOANYEARS)))))
 else:
     TOTAL = None
 
-TOTAL = int(round((BORROWED * ((1 + APR / 12) ** (12 * LOANYEARS)))))
 BORROWED = '${:,}'.format(BORROWED)
 REPORT = TITLE + '\n'
 REPORT += INDENT + 'Principal:' + '{:>15}'.format(BORROWED) + '\n'
 REPORT += INDENT + 'Duration:' + '{:>13}'.format(LOANYEARS) + 'yrs \n'
 REPORT += INDENT + 'Pre-qualified?:' + '{:>8}'.format(PREQUAL) + '\n\n'
-REPORT += INDENT + 'Total:' + '{:>19}'.format('${:,}'.format(TOTAL))
 
+if TOTAL is not None:
+    REPORT += INDENT + 'Total:' + '{:>19}'.format('${:,}'.format(TOTAL))
+else:
+    REPORT += INDENT + 'Total:' + '{:>19}'.format('None')
 print REPORT
