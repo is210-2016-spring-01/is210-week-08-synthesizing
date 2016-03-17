@@ -61,7 +61,7 @@ else:
     TOTAL = None
 
 print ''
-print 'Loan Reort For: {}'.format(NAME)
+print 'Loan Report For: {}'.format(NAME)
 print '---------------------------------------'
 print '     Principle:{:>15}'.format(PRINCIPAL)
 print '     Duration:{:>13}'.format(DURATION)+ 'years'
@@ -69,7 +69,7 @@ print '     Pre-Qualified?:{:>10}'.format(PRE_QUALIFIED)
 print''
 if TOTAL is not None:
     print 'Total:{:>19.0f}'.format(TOTAL)
-else:
-    print 'Total:{:>20}'.format(NONE)
+
+    
 
 
