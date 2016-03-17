@@ -17,35 +17,35 @@ REPORT = ''
 if BORROWED <= 199999:
     if LOANYEARS <= 15:
         if PREQUAL == 'Yes' or PREQUAL == 'y':
-            APR = .0363
+            APR = '.0363'
         else:
-            APR = .0465
+            APR = '.0465'
     elif 16 <= LOANYEARS <= 20:
         if PREQUAL == 'Yes' or PREQUAL == 'y':
-            APR = .0404
+            APR = '.0404'
         else:
-            APR = .0498
+            APR = '.0498'
     elif 21 <= LOANYEARS <= 30:
         if PREQUAL == 'Yes' or PREQUAL == 'y':
-            APR = .0577
+            APR = '.0577'
         else:
-            APR = .0639
+            APR = '.0639'
     else:
         pass
 elif 200000 <= BORROWED <= 999999:
     if LOANYEARS <= 15:
         if PREQUAL == 'Yes' or PREQUAL == 'y':
-            APR = .0302
+            APR = '.0302'
         else:
-            APR = .0398
+            APR = '.0398'
     elif 16 <= LOANYEARS <= 20:
         if PREQUAL == 'Yes' or PREQUAL == 'y':
-            APR = .0327
+            APR = '.0327'
         else:
-            APR = .0408
+            APR = '.0408'
     elif 21 <= LOANYEARS <= 30:
         if PREQUAL == 'Yes' or PREQUAL == 'y':
-            APR = .0466
+            APR = '.0466'
         else:
             APR = None
     else:
@@ -53,12 +53,12 @@ elif 200000 <= BORROWED <= 999999:
 elif BORROWED >= 1000000:
     if LOANYEARS <= 15:
         if PREQUAL == 'Yes' or PREQUAL == 'y':
-            APR = .0205
+            APR = '.0205'
         else:
             TOTAL = None
     elif 16 <= LOANYEARS <= 20:
         if PREQUAL == 'Yes' or PREQUAL == 'y':
-            APR = .0262
+            APR = '.0262'
         else:
             APR = None
     else:
