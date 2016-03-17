@@ -55,7 +55,7 @@ elif BORROWED >= 1000000:
         if PREQUAL == 'Yes' or PREQUAL == 'y':
             APR = '.0205'
         else:
-            TOTAL = None
+            APR = None
     elif 16 <= LOANYEARS <= 20:
         if PREQUAL == 'Yes' or PREQUAL == 'y':
             APR = '.0262'
