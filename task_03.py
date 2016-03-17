@@ -8,8 +8,8 @@ CUSTNAME = str(raw_input('What is your name? '))
 BORROWED = int(raw_input('What is the principal amount? '))
 LOANYEARS = int(raw_input('For how many years is this being borrowed? '))
 PREQUAL = str(raw_input('Are you pre-qualified? '))
-APR = dec.Decimal(0.0)
-TOTAL = int()
+APR = 0
+TOTAL = 0
 TITLE = 'Loan Report for: ' + CUSTNAME + '\n' + ('-' * 35)
 INDENT = ' ' * 4
 REPORT = ''
@@ -19,7 +19,7 @@ if BORROWED <= 199999:
         if PREQUAL == 'Yes' or PREQUAL == 'y':
             APR = .0363
         else:
-            APR = dec.Decimal(.0465)
+            APR = .0465
     elif 16 <= LOANYEARS <= 20:
         if PREQUAL == 'Yes' or PREQUAL == 'y':
             APR = .0404
@@ -68,7 +68,7 @@ else:
 
 if APR is not None:
     APR = dec.Decimal(APR)
-    TOTAL = int(round((BORROWED * ((1 + APR / 12) ** (12 * LOANYEARS)))))
+    TOTAL = int(round(BORROWED * (1 + APR / 12) ** (12 * LOANYEARS)))
 else:
     TOTAL = None
 
