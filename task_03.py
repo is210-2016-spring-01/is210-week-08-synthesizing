@@ -122,6 +122,7 @@ def get_yn(prompt):
     """
 
     validyn = False
+    yorn = ''
 
     while not validyn:
 
