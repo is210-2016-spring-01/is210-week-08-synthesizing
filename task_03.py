@@ -20,7 +20,7 @@ if 0 <= PRINCIPAL and PRINCIPAL <= 199999:
     if 1 <= DURATION and DURATION <= 15:
         if PRE_QUALIFIED == 'Yes' or PRE_QUALIFIED == 'y':
             RATE = '0.0363'
-        elif PRE_QUALIFIED == 'No' or PRE_QULAIFIED == 'n':
+        elif PRE_QUALIFIED == 'No' or PRE_QUALIFIED == 'n':
             RATE = '0.0465'
     elif 16 <= DURATION and DURATION <= 20:
         if PRE_QUALIFIED == 'Yes' or PRE_QUALIFIED == 'y':
@@ -28,7 +28,7 @@ if 0 <= PRINCIPAL and PRINCIPAL <= 199999:
         elif PRE_QUALIFIED == 'No' or PRE_QUALIFIED == 'n':
             RATE = '0.0498'
     elif 21 <= DURATION and DURATION <= 30:
-        if PRE_QUALIFIED == 'Yes' or PRE_QUALIFICATION == 'y':
+        if PRE_QUALIFIED == 'Yes' or PRE_QUALIFIED == 'y':
             RATE = '0.0577'
         elif PRE_QUALIFIED == 'No'or PRE_QUALIFIED == 'n':
             RATE = '0.0639'
@@ -70,4 +70,4 @@ print''
 if TOTAL is not None:
     print '      Total:{:>19.0f}'.format(TOTAL)
 else:
-    print '      Total:{:>20'.format(None)
+    print '      Total:{:>20}'.format(None)
