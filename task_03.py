@@ -47,9 +47,11 @@ if PRINCIPLE >= 1000000:
     if YEARS >= 16 and YEARS <= 20:
         if PQUALIFIED == ('yes', 'y'):
             IR = '0.0262'
+if IR is not None:
+    IR = decimal.Decimal(IR)
 
-IR = decimal.Decimal(IR)
-TOTAL = int(round(PRINCIPLE * (1 + IR/12)**(12*YEARS)))
+if TOTAL is not None:
+    TOTAL = int(round(PRINCIPLE * (1 + IR/12)**(12*YEARS)))
 
 
 print 'Loan Report for: {0}'.format(NAME)
@@ -57,5 +59,4 @@ print '-' * 35
 print '        Principle:{:>12}'.format(PRINCIPLE)
 print '        Duration:{:>13}'.format(YEARS)
 print '        Pre-qualified:{:>8}'.format(PQUALIFIED)
-print '        Total:{:>16.0f}'.format(TOTAL)
-print '        Total:{:>16}'.format(None)
+print '        Total:{:>16}'.format(TOTAL)
