@@ -1,3 +1,7 @@
+#!/usr/bin/env python
+# _*_ coding: utf-8 _*_
+"""Task 3 file."""
+
 import decimal
 
 NAME = raw_input('What is your name? ')
@@ -26,17 +30,17 @@ if PRINCIPLE >= 0 and PRINCIPLE <= 199999:
             IR = '0.0639'
 
 if PRINCIPLE >= 200000 and PRINCIPLE <= 999999:
-     if YEARS >= 1 and YEARS <= 15:
+    if YEARS >= 1 and YEARS <= 15:
         if PQUALIFIED == ('Yes', 'y'):
             IR = '0.0302'
         elif PQUALIFIED == ('No', 'n'):
             IR = '0.0398'
-     elif YEARS >= 16 and YEARS <= 20:
+    elif YEARS >= 16 and YEARS <= 20:
         if PQUALIFIED == ('Yes', 'y'):
             IR = '0.0327'
         elif PQUALIFIED == ('No', 'n'):
             IR = '0.0408'
-     elif YEARS >= 21 and YEARS <= 30:
+    elif YEARS >= 21 and YEARS <= 30:
         if PQUALIFIED == ('Yes', 'y'):
             IR = '0.0466'
 
@@ -47,7 +51,7 @@ if PRINCIPLE >= 1000000:
     if YEARS >= 16 and YEARS <= 20:
         if PQUALIFIED == ('yes', 'y'):
             IR = '0.0262'
-            
+
 if IR is not None:
     IR = decimal.Decimal(IR)
     TOTAL = int(round(PRINCIPLE * (1 + IR/12)**(12*YEARS)))
