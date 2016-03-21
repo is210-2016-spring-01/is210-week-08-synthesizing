@@ -9,7 +9,7 @@ if BASE == 'Seattle Gray':
     if ACCENT == 'Ceramic Glaze':
         HIGHLIGHT = raw_input('Which highlight color'
                               ', "Basically White" or "White"?: ')
-    else ACCENT == 'Cumulus Nimbus':
+    elif ACCENT == 'Cumulus Nimbus':
         HIGHLIGHT = raw_input('Which highlight color'
                               ', "Off-White" or "Paper White"?: ')
 else BASE == 'Manatee':
@@ -18,7 +18,7 @@ else BASE == 'Manatee':
     if ACCENT == 'Platinume Mist':
         HIGHLIGHT = raw_input('Which highlight color'
                               ',"Bone White" or "Just White"?: ')
-    else ACCENT == 'Spartan Sage':
+    elif ACCENT == 'Spartan Sage':
         HIGHLIGHT = raw_input('Which highlight color'
                               ',"Fractal White" or "Not White"?: ')
 
