@@ -8,8 +8,8 @@ LOAN = raw_input('What is the principal of the loan? ')
 YEARS = raw_input('How many years is this loan being borrowed? ')
 QUALIFIED = raw_input('Are you pre-qualified for this loan? ')
 
-LOAN = float(LOAN)
-YEARS = float(YEARS)
+LOAN = int(LOAN)
+YEARS = int(YEARS)
 RATE = None
 TOTAL = None
 
