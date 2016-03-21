@@ -46,7 +46,7 @@ if PRIN >= 1000000:
         if YEARS >= 1 and YEARS <= 15:
             INTEREST = .0205
         elif YEARS >= 16 and YEARS <= 20:
-            INTEREST = .0398
+            INTEREST = .0262
 
 TOTAL = PRIN *(1 + (decimal.Decimal(INTEREST) / 12)) ** (12 * YEARS)
 TOTAL = int(round(TOTAL))
