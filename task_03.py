@@ -50,10 +50,11 @@ elif LOAN >= 1000000:
     elif YEARS >= 16 and YEARS <= 20:
         if QUALIFIED == 'Yes' or QUALIFIED == 'y':
             RATE = '0.0262'
-
+Dec = Decimal(RATE)
+NRATE = '{0:f}'.format(Dec)
 N = 12
 if RATE is not None:
-    TOTAL = int(round(LOAN * (1 + Decimal(Decimal(RATE))/N)**(N*YEARS)))
+    TOTAL = int(round(LOAN * (1 + Decimal(Decimal(NRATE))/N)**(N*YEARS)))
 else:
     TOTAL = None
 
