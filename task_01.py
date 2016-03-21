@@ -4,18 +4,18 @@
 
 BASE = raw_input('Which base color, "Seattle Gray" or "Manatee"?: ')
 if BASE == 'Seattle Gray':
-    if ACCENT = raw_input('Which accent color, '
+    ACCENT == raw_input('Which accent color, '
                        '"Ceramic Glaze" or "Cumulus Nimbus"?: ')
-    elif ACCENT == 'Ceramic Glaze':
+    if ACCENT == 'Ceramic Glaze':
         if HIGHLIGHT = raw_input('Which highlight color'
                               ', "Basically White" or "White"?: ')
     elif ACCENT == 'Cumulus Nimbus':
         if HIGHLIGHT = raw_input('Which highlight color'
                               ', "Off-White" or "Paper White"?: ')
 elif BASE == 'Manatee':
-    if ACCENT = raw_input('Which accent color'
+    ACCENT == raw_input('Which accent color'
                        ', "Platinum Mist" or "Spartan Sage"?: ')
-    elif ACCENT == 'Platinume Mist':
+    if ACCENT == 'Platinume Mist':
         if HIGHLIGHT = raw_input('Which highlight color'
                               ',"Bone White" or "Just White"?: ')
     elif ACCENT == 'Spartan Sage':
