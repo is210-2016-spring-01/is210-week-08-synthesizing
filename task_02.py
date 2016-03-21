@@ -8,5 +8,5 @@ TIME = int(raw_input('What time to start alarm? '))
 
 SNOOZE = True if DAY == 'sat' or DAY == 'sun' or TIME < 600 else False
 
-if not SNOOZE:
+if SNOOZE is False:
     print 'Beep! Beep! Beep! Beep! Beep! Beep!'
