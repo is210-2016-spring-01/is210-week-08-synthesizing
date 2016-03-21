@@ -54,7 +54,6 @@ elif LOAN >= 1000000:
 N = 12
 if RATE is not None:
     TOTAL = int(round(LOAN * (1 + Decimal(Decimal(RATE))/N)**(N*YEARS)))
-
 else:
     TOTAL = None
 
