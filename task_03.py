@@ -58,6 +58,7 @@ if RATE is not None:
 else:
     TOTAL = None
 
+TOTAL = int(TOTAL)
 LOAN = '{:0,d}'.format(LOAN)
 STOTAL = '{:0,d}'.format(TOTAL)
 
@@ -68,7 +69,6 @@ REPORT = ('Loan report for: ' + NAME + ' \n'
           + '       Pre-Qualified?:      ' + QUALIFIED.rjust(16) + '\n'
           + '\n'
           + '       Total:      ' + STOTAL.rjust(25))
-
 print REPORT
 # if RATE is not None:
    # RATE = decimal.Decimal(RATE)
