@@ -8,8 +8,8 @@ LOAN = raw_input('What is the principal of the loan? ')
 YEARS = raw_input('How many years is this loan being borrowed? ')
 QUALIFIED = raw_input('Are you pre-qualified for this loan? ')
 
-LOAN = int(LOAN)
-YEARS = int(YEARS)
+LOAN = float(LOAN)
+YEARS = float(YEARS)
 RATE = None
 TOTAL = None
 
@@ -54,7 +54,7 @@ elif LOAN >= 1000000:
 N = 12
 if RATE is not None:
     RATE = decimal.Decimal(RATE)
-    TOTAL = int(round(LOAN * (1 + RATE/N)**(N*YEARS)))
+    TOTAL = float(round(LOAN * (1 + RATE/N)**(N*YEARS)))
 else:
     TOTAL = None
 
