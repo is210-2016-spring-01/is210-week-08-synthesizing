@@ -11,7 +11,7 @@ QUALIFIED = raw_input('Are you pre-qualified for this loan? ')
 LOAN = int(LOAN)
 YEARS = int(YEARS)
 RATE = None
-TOTAL = None
+#TOTAL = None
 
 if LOAN >= 0 and LOAN <= 199999:
     if YEARS >= 1 and YEARS <= 15:
@@ -54,7 +54,7 @@ elif LOAN >= 1000000:
 N = 12
 if RATE is not None:
    RATE = decimal.Decimal(RATE)
-   TOTAL = int(LOAN * (1 + RATE/N)**(N*YEARS))
+   TOTAL = long(LOAN * (1 + RATE/N)**(N*YEARS))
 else:
     TOTAL = None
 
