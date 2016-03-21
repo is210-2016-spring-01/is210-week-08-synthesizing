@@ -49,7 +49,7 @@ if PRIN >= 1000000:
             INTEREST = .0398
 
 TOTAL = PRIN *(1 + (decimal.Decimal(INTEREST) / 12)) ** (12 * YEARS)
-TOTAL = int(TOTAL)
+TOTAL = int(round(TOTAL))
 
 REPORT = ('Loan Report for: {0:>15}\n---------------------------------------'
           '----\nPrincipal: {1:>21,.0f}\nDuration: {2:>19}yrs\n'
