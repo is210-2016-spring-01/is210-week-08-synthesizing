@@ -16,5 +16,5 @@ NIGHTTIME = (TIME > 000 and TIME < 0600) or (TIME > 000 and TIME < 600)
 
 SNOOZE = True if (WEEKEND) or (NIGHTTIME) else False
 
-if SNOOZE == False:
+if SNOOZE is False:
     print "Beep! " * 5
