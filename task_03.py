@@ -60,13 +60,14 @@ if IR is not None:
 else:
     TOTAL = None
 
-
+print ''
 print 'Loan Report for: {0}'.format(NAME)
 print '-' * 35
-print '        Principle:{:>15}'.format(PRINCIPLE)
-print '        Duration:{:>13}'.format(YEARS)
-print '        Pre-qualified:{:>10}'.format(PQUALIFIED)
+print '      Principle:{:>15}'.format(PRINCIPLE)
+print '      Duration:{:>16}'.format(YEARS)
+print '      Pre-qualified?:{:>10}'.format(PQUALIFIED)
+print ''
 if TOTAL is not None:
-    print '        Total:{:>19.0f}'.format(TOTAL)
+    print '      Total:{:>19.0f}'.format(TOTAL)
 else:
-    print '        Total:{:>20}'.format(None)
+    print '      Total:{:>19}'.format(None)
