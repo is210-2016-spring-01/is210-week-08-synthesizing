@@ -66,7 +66,7 @@ if RATE is not None:
 else:
     TOTAL = None
 
-LOANREPORT = 'Loan Report for: ' + CUSTNAME + '\n' + ('-' * 70)
+LOANREPORT = 'Loan Report for: ' + CUSTNAME + '\n' + ('-' * 70) + '\n'
 LOANREPORT += (' ' * 6) + 'Principal:' + '{:>15}'.format('${:,}'.format
                                                          (PRINCIPAL)) + '\n'
 LOANREPORT += (' ' * 6) + 'Duration:' + '{:>13}'.format(LOANYEAR) + 'yrs' + '\n'
