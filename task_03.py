@@ -18,7 +18,7 @@ if LOAN >= 0 and LOAN <= 199999:
         if QUALIFIED == 'Yes' or QUALIFIED == 'y':
             RATE = '0.0363'
         elif QUALIFIED == 'No' or QUALIFIED == 'n':
-            RATE = '0.046'5
+            RATE = '0.0465'
     elif YEARS >= 16 and YEARS <= 20:
         if QUALIFIED == 'Yes' or QUALIFIED == 'y':
             RATE = '0.0404'
