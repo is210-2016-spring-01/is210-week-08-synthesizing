@@ -3,6 +3,7 @@
 """Second task for this week"""
 
 DAY = raw_input('What day is it? ')
+DAY = DAY.strip().lower()[:3]
 TIME = int(raw_input('What time to start alarm? '))
 
 
