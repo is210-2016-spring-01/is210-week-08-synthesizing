@@ -53,7 +53,8 @@ elif LOAN >= 1000000:
 
 N = 12
 if RATE is not None:
-    RATE = decimal.Decimal(RATE)
+    RATE = float(RATE)
+   #RATE = decimal.Decimal(RATE)
     TOTAL = int(round(LOAN * (1 + RATE/N)**(N*YEARS)))
 else:
     TOTAL = None
