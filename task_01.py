@@ -11,7 +11,7 @@ if BASE == 'Seattle Gray':
                               ', "Basically White" or "White"?: ')
     elif ACCENT == 'Cumulus Nimbus':
         HIGHLIGHT = raw_input('Which highlight color'
-                              ', "Off-White" or "PaperWhite"?: ')
+                              ', "Off-White" or "Paper White"?: ')
 elif BASE == 'Manatee':
     ACCENT = raw_input('Which accent color'
                        ', "Platinum Mist" or "Spartan Sage"?: ')
