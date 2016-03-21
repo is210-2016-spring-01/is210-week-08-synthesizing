@@ -71,6 +71,7 @@ REPORT = ('Loan report for: {0} \n'
 LOAN = '{:0,d}'.format(LOAN)
 TOTAL = '{:0,d}'.format(TOTAL)
 
+LOAN = int(LOAN)
+TOTAL = int(TOTAL)
+
 print REPORT.format(NAME, LOAN, YEARS, QUALIFIED, TOTAL)
-LOAN = str(LOAN)
-TOTAL = str(TOTAL)
