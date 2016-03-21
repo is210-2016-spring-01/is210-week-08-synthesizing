@@ -48,11 +48,12 @@ if PRIN >= 1000000:
         elif YEARS >= 16 and YEARS <= 20:
             INTEREST = .0262
 
-TOTAL = PRIN *(1 + (decimal.Decimal(INTEREST) / 12)) ** (12 * YEARS)
+INTEREST = decimal.Decimal(INTEREST)
+TOTAL = PRIN *(1 + INTEREST / 12) ** (12 * YEARS)
 TOTAL = int(round(TOTAL))
 
 REPORT = ('Loan Report for: {0:>15}\n---------------------------------------'
           '----\nPrincipal: {1:>21,.0f}\nDuration: {2:>19}yrs\n'
           'Pre-qualified?: {3:>16}\n'
-          '\nTotal: {4:>25,.0f}').format(NAME, PRIN, YEARS, QUAL, TOTAL)
+          '\nTotal: {4:>25,}').format(NAME, PRIN, YEARS, QUAL, TOTAL)
 print REPORT
