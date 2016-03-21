@@ -28,6 +28,8 @@ if 0 < PRINCIPAL <= 199999:
             RATE = '0.0577'
         else:
             RATE = '0.0639'
+    else:
+        RATE = None
 elif 200000 < PRINCIPAL <= 999999:
     if LOANYEAR <= 15:
         if PREQUAL == 'Yes' or PREQUAL == 'y':
@@ -44,6 +46,8 @@ elif 200000 < PRINCIPAL <= 999999:
             RATE = '0.0466'
         else:
             RATE = None
+    else:
+        RATE = None
 elif PRINCIPAL >= 1000000:
     if LOANYEAR <= 15:
         if PREQUAL == 'Yes' or PREQUAL == 'y':
