@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """Loans are great for studens!!"""
 
-import decimal
+from decimal import Decimal
 NAME = raw_input('What is your name? ')
 LOAN = raw_input('What is the principal of the loan? ')
 YEARS = raw_input('How many years is this loan being borrowed? ')
@@ -53,7 +53,7 @@ elif LOAN >= 1000000:
 
 N = 12
 if RATE is not None:
-    TOTAL = int(round(LOAN * (1 + decimal.Decimal(RATE)/N)**(N*YEARS)))
+    TOTAL = int(round(LOAN * (1 + Decimal(Decimal(RATE))/N)**(N*YEARS)))
 
 else:
     TOTAL = None
