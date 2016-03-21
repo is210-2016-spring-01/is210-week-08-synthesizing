@@ -67,16 +67,18 @@ REPORT = ('Loan report for: {0} \n'
           + '       Duration:             ' + '{2}'.rjust(20) + '\n'
           + '       Pre-Qualified?:        ' + '{3}'.rjust(20) + '\n'
           + '\n'
-          #+ '       Total:                ' + '${4}'.rjust(15))
-          + '       Total:                ' + '$'{4}.rjust(15))
-#LOAN = '{:0,d}'.format(LOAN)
-#TOTAL = '{:0,d}'.format(TOTAL)
+          + '       Total:                ' + '${4}'.rjust(15))
 
-STOTAL = '{:0,d}'.format(TOTAL)
-SLOAN = '{:0,d}'.format(LOAN)
+TOTAL = int(TOTAL)
+LOAN = int(LOAN)
+LOAN = '{:0,d}'.format(LOAN)
+TOTAL = '{:0,d}'.format(TOTAL)
 
-LOAN = float(LOAN)
-TOTAL = float(TOTAL)
-YEARS = float(YEARS)
+# STOTAL = '{:0,d}'.format(TOTAL)
+# SLOAN = '{:0,d}'.format(LOAN)
 
-print REPORT.format(NAME, SLOAN, YEARS, QUALIFIED, STOTAL)
+# LOAN = float(LOAN)
+# TOTAL = float(TOTAL)
+# YEARS = float(YEARS)
+
+print REPORT.format(NAME, LOAN, YEARS, QUALIFIED, TOTAL)
