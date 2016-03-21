@@ -53,7 +53,7 @@ elif LOAN >= 1000000:
 
 N = 12
 if RATE is not None:
-   #RATE = decimal.Decimal(RATE)
+   RATE = decimal.Decimal(RATE)
     TOTAL = int(round(LOAN * (1 + RATE/N)**(N*YEARS)))
 else:
     TOTAL = None
@@ -68,11 +68,11 @@ REPORT = ('Loan report for: {0} \n'
           + '       Pre-Qualified?:        ' + '{3}'.rjust(20) + '\n'
           + '\n'
           + '       Total:                ' + '${4}'.rjust(15))
-LOAN = '{:0,d}'.format(LOAN)
-TOTAL = '{:0,d}'.format(TOTAL)
+#LOAN = '{:0,d}'.format(LOAN)
+#TOTAL = '{:0,d}'.format(TOTAL)
 
 LOAN = float(LOAN)
 TOTAL = float(TOTAL)
 YEARS = float(YEARS)
 
-print REPORT.format(NAME, LOAN, YEARS, QUALIFIED, TOTAL)
+print REPORT.format(NAME, {:0,d}'.format(LOAN), YEARS, QUALIFIED, TOTAL = '{:0,d}'.format(TOTAL))
