@@ -19,11 +19,11 @@ if BASE == 'Seattle Gray':
     else:
         pass
 elif BASE == 'Manatee':
-    ACCENT = raw_input('Which accent color,'
+    ACCENT = raw_input('Which accent color, '
                        '\"Platinum Mist\" or \"Spartan Sage\"?: ')
-    if ACCENT == 'Plantinum Mist':
+    if ACCENT == 'Platinum Mist':
         HIGHLIGHT = raw_input('Which highlight color,'
-                              '\"Bone White\" or \"Just White\"?: ')
+                              '\"Bone White\" or \"Just White\": ')
     elif ACCENT == 'Spartan Sage':
         HIGHLIGHT = raw_input('Which highlight color,'
                               '\"Fractal White\" or \"Not White\": ')
