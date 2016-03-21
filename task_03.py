@@ -56,9 +56,9 @@ N = 12
 
 if IR is not None:
     IR = decimal.Decimal(IR)
-    TOTAL = int(round(PRINCIPAL * (1 + IR/N)**(N*YEARS)))
-else:
-    TOTAL = None
+
+if TOTAL is not None:
+    TOTAL = int(round(PRINCIPLE * (1 + IR/N)**(N*YEARS)))
 
 print ''
 print 'Loan Report for: {0}'.format(NAME)
@@ -67,7 +67,4 @@ print '      Principle:{:>15}'.format(PRINCIPLE)
 print '      Duration:{:>16}'.format(YEARS)
 print '      Pre-qualified?:{:>10}'.format(PQUALIFIED)
 print ''
-if TOTAL is not None:
-    print '      Total:{:>19}'.format(TOTAL)
-else:
-    print '      Total:{:>19}'.format(None)
+print '      Total:{:>19}'.format(TOTAL)
