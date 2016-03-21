@@ -67,7 +67,8 @@ REPORT = ('Loan report for: {0} \n'
           + '       Duration:             ' + '{2}'.rjust(20) + '\n'
           + '       Pre-Qualified?:        ' + '{3}'.rjust(20) + '\n'
           + '\n'
-          + '       Total:                ' + '${4}'.rjust(15))
+          #+ '       Total:                ' + '${4}'.rjust(15))
+          + '       Total:                ' + '$'{4}.rjust(15))
 #LOAN = '{:0,d}'.format(LOAN)
 #TOTAL = '{:0,d}'.format(TOTAL)
 
