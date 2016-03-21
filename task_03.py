@@ -58,6 +58,7 @@ if RATE is not None:
     TOTAL = int(round(LOAN * (1 + Decimal(Decimal(NRATE))/N)**(N*YEARS)))
 else:
     TOTAL = None
+    RATE = None
 
 RATE =int(float(RATE))
 TOTAL = int(TOTAL)
