@@ -21,7 +21,7 @@ WEEKEND = DAY == 'sun' or DAY == 'sat'
 NIGHTTIME = TIME < 0600 or TIME < 600
 
 SNOOZE = True if WEEKEND or NIGHTTIME else False
-    
+
 if SNOOZE is False:
     TIME >= 600
     ALARM = "Beep! " * 5
