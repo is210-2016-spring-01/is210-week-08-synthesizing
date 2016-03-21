@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-"""Task 01"""
+"""Task 01: Build a decision tree where you select each of your
+three colors one-at-a-time from the selections"""
 
 
 BASE = raw_input('Which base color, "Seattle Gray" or "Manatee"?: ')
