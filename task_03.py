@@ -12,6 +12,7 @@ PRINCIPAL = int(raw_input(
 DURATION = int(raw_input("For how many years is this loan being borrowed? "))
 PREQUALIFIED = raw_input("Are you pre-qualified for this loan? ")
 
+
 if PRINCIPAL > 0 and PRINCIPAL < 200000:
     if DURATION > 1 and DURATION <= 15:
         if PREQUALIFIED == "Yes" or PREQUALIFIED == "y":
@@ -52,14 +53,12 @@ elif PRINCIPAL > 1000000:
 else:
     TOTAL = None
 
-INTEREST = decimal.Decimal(INTEREST)
-TOTAL = round(PRINCIPAL * (1 + (INTEREST / 12)) ** (12 * DURATION))
-
-print INTEREST
+RATE = decimal.Decimal(INTEREST) / 100
+TOTAL = int(round(PRINCIPAL * ((1 + (RATE / 12)) ** (12 * DURATION))))
 
 REPORT = ("Loan Report for: {}\n" +
           "----------------------------------------------\n"
-          + "    Principal: ${}\n" + "    Duration: {}yrs\n" +
+          + "    Principal: ${}\n" + "    Duration: {}yrs\n"
           "    Pre-Qualified?: {}\n\n" +
           "    Total: ${}").format(NAME, PRINCIPAL,
                                    DURATION, PREQUALIFIED, TOTAL)
