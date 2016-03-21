@@ -10,7 +10,7 @@ QUALIFIED = raw_input('Are you pre-qualified for this loan? ')
 
 LOAN = int(LOAN)
 YEARS = int(YEARS)
-RATE = None
+#RATE = None
 #TOTAL = None
 
 if LOAN >= 0 and LOAN <= 199999:
@@ -50,6 +50,7 @@ elif LOAN >= 1000000:
     elif YEARS >= 16 and YEARS <= 20:
         if QUALIFIED == 'Yes' or QUALIFIED == 'y':
             RATE = '0.0262'
+
 Dec = Decimal(RATE)
 NRATE = '{0:f}'.format(Dec)
 N = 12
