@@ -16,40 +16,40 @@ RATE = None
 if LOAN >= 0 and LOAN <= 199999:
     if YEARS >= 1 and YEARS <= 15:
         if QUALIFIED == 'Yes' or QUALIFIED == 'y':
-            RATE = 0.0363
+            RATE = '0.0363'
         elif QUALIFIED == 'No' or QUALIFIED == 'n':
-            RATE = 0.0465
+            RATE = '0.046'5
     elif YEARS >= 16 and YEARS <= 20:
         if QUALIFIED == 'Yes' or QUALIFIED == 'y':
-            RATE = 0.0404
+            RATE = '0.0404'
         elif QUALIFIED == 'No' or QUALIFIED == 'n':
-            RATE = 0.0498
+            RATE = '0.0498'
     elif YEARS >= 21 and YEARS <= 30:
         if QUALIFIED == 'Yes' or QUALIFIED == 'y':
-            RATE = 0.0577
+            RATE = '0.0577'
         elif QUALIFIED == 'No' or QUALIFIED == 'n':
-            RATE = 0.0639
+            RATE = '0.0639'
 elif LOAN >= 200000 and LOAN <= 999999:
     if YEARS >= 1 and YEARS <= 15:
         if QUALIFIED == 'Yes' or QUALIFIED == 'y':
-            RATE = 0.0302
+            RATE = '0.0302'
         elif QUALIFIED == 'No' or QUALIFIED == 'n':
-            RATE = 0.0398
+            RATE = '0.0398'
     elif YEARS >= 16 and YEARS <= 20:
         if QUALIFIED == 'Yes' or QUALIFIED == 'y':
-            RATE = 0.0327
+            RATE = '0.0327'
         if QUALIFIED == 'No' or QUALIFIED == 'n':
-            RATE = 0.0408
+            RATE = '0.0408'
     elif YEARS >= 21 and YEARS <= 30:
         if QUALIFIED == 'Yes' or QUALIFIED == 'y':
-            RATE = 0.0466
+            RATE = '0.0466'
 elif LOAN >= 1000000:
     if YEARS >= 1 and YEARS <= 15:
         if QUALIFIED == 'Yes' or QUALIFIED == 'y':
-            RATE = 0.0205
+            RATE = '0.0205'
     elif YEARS >= 16 and YEARS <= 20:
         if QUALIFIED == 'Yes' or QUALIFIED == 'y':
-            RATE = 0.0262
+            RATE = '0.0262'
 
 N = 12
 if RATE is not None:
