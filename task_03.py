@@ -63,7 +63,7 @@ else:
     TOTAL = None
     RATE = None
 
-if RATE = None:
+if RATE == None:
     pass
 else RATE = Decimal(int(float(RATE)))
 
