@@ -63,10 +63,6 @@ else:
     TOTAL = None
     RATE = None
 
-if RATE == None:
-    pass
-else RATE == Decimal(int(float(RATE)))
-
 TOTAL = int(TOTAL)
 LOAN = '{:0,d}'.format(LOAN)
 STOTAL = '{:0,d}'.format(TOTAL)
