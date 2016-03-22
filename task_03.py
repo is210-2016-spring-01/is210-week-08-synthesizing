@@ -60,9 +60,8 @@ N = 12
 if RATE is not None:
     TOTAL = int(round(LOAN * (1 + Decimal(Decimal(NRATE))/N)**(N*YEARS)))
 else:
-    TOTAL = None
-    RATE = None
-
+    break
+    
 TOTAL = int(TOTAL)
 LOAN = '{:0,d}'.format(LOAN)
 STOTAL = '{:0,d}'.format(TOTAL)
