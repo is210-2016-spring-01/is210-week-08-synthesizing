@@ -59,8 +59,8 @@ NRATE = '{0:f}'.format(Dec)
 N = 12
 if RATE is not None:
     TOTAL = int(round(LOAN * (1 + Decimal(Decimal(NRATE))/N)**(N*YEARS)))
-else:
-return RATE
+    else:
+    return RATE
     
 TOTAL = int(TOTAL)
 LOAN = '{:0,d}'.format(LOAN)
