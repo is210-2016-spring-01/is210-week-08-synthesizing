@@ -8,9 +8,6 @@ QUESTION1 = QUESTION1[:3].lower()
 QUESTION2 = int(raw_input('What time is it?: '))
 
 SNOOZE = (True if QUESTION1 == 'sat' or QUESTION1 == 'sun' or QUESTION2 < 600
-          else False)
-
-if SNOOZE is False:
-    SNOOZE = 'Beep! Beep! Beep! Beep! Beep!'
+          else 'Beep! ' * 5)
 
 print SNOOZE
