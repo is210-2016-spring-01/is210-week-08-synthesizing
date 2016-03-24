@@ -13,54 +13,68 @@ YEARS = int(YEARS)
 #RATE = None
 #TOTAL = None
 
-if LOAN >= 0 and LOAN <= 199999:
-    if YEARS >= 1 and YEARS <= 15:
+if 0< LOAN <= 199999:
+    if YEARS <= 15:
         if QUALIFIED == 'Yes' or QUALIFIED == 'y':
             RATE = '0.0363'
-        elif QUALIFIED == 'No' or QUALIFIED == 'n':
+        else:
             RATE = '0.0465'
-    elif YEARS >= 16 and YEARS <= 20:
+    elif 16 <= YEARS <= 20:
         if QUALIFIED == 'Yes' or QUALIFIED == 'y':
             RATE = '0.0404'
-        elif QUALIFIED == 'No' or QUALIFIED == 'n':
+        else:
             RATE = '0.0498'
-    elif YEARS >= 21 and YEARS <= 30:
+    elif 21 <= YEARS <= 30:
         if QUALIFIED == 'Yes' or QUALIFIED == 'y':
             RATE = '0.0577'
-        elif QUALIFIED == 'No' or QUALIFIED == 'n':
+        else:
             RATE = '0.0639'
-elif LOAN >= 200000 and LOAN <= 999999:
-    if YEARS >= 1 and YEARS <= 15:
+    else:
+        RATE = None
+elif 2000000 <= LOAN <= 999999:
+    if YEARS <= 15:
         if QUALIFIED == 'Yes' or QUALIFIED == 'y':
             RATE = '0.0302'
-        elif QUALIFIED == 'No' or QUALIFIED == 'n':
+        else:
             RATE = '0.0398'
-    elif YEARS >= 16 and YEARS <= 20:
+    elif 16 <= YEARS <= 20:
         if QUALIFIED == 'Yes' or QUALIFIED == 'y':
             RATE = '0.0327'
-        elif QUALIFIED == 'No' or QUALIFIED == 'n':
+        else:
             RATE = '0.0408'
-    elif YEARS >= 21 and YEARS <= 30:
+    elif 21 <= YEARS <= 30:
         if QUALIFIED == 'Yes' or QUALIFIED == 'y':
             RATE = '0.0466'
+        else:
+            RATE = None
+    else:
+        RATE = None            
 elif LOAN >= 1000000:
-    if YEARS >= 1 and YEARS <= 15:
+    if YEARS <= 15:
         if QUALIFIED == 'Yes' or QUALIFIED == 'y':
             RATE = '0.0205'
-    elif YEARS >= 16 and YEARS <= 20:
+        else:
+            RATE = None
+    elif 16 <= YEARS <= 20:
         if QUALIFIED == 'Yes' or QUALIFIED == 'y':
             RATE = '0.0262'
-elif LOAN <= 0:
+        RATE = None
+    else:
+        RATE = None
+else: 
     RATE = None
-    TOTAL = None
+#elif:
+#    LOAN <= 0:
+#    RATE = None
+#    TOTAL = None
     
 Dec = Decimal(RATE)
 NRATE = '{0:f}'.format(Dec)
 N = 12
 if RATE is not None:
     TOTAL = int(round(LOAN * (1 + Decimal(Decimal(NRATE))/N)**(N*YEARS)))
-    else:
-    return RATE
+    #else:
+    #return RATE
     
 TOTAL = int(TOTAL)
 LOAN = '{:0,d}'.format(LOAN)
