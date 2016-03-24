@@ -53,18 +53,18 @@ elif LOAN >= 1000000:
         if QUALIFIED == 'Yes' or QUALIFIED == 'y':
             RATE = '0.0262'
     
-REPORT = 'Loan report for: ' + NAME + ' \n'
+REPORT = ('Loan report for: ' + NAME + ' \n'
           + '-------------------------------------------------' + '\n'
           + '       Principal:      ' + str(LOAN).rjust(11) + '\n'
           + '       Duration:       ' + str(YEARS).rjust(11) + '\n'
           + '       Pre-Qualified?: ' + QUALIFIED.rjust(11) + '\n'
-          + '\n'
+          + '\n')
 if RATE is not None:
     Dec = Decimal(RATE)
     TOTAL = int(round(LOAN * (1 + Dec/N)**(N*YEARS)))
     #TOTAL = int(round(LOAN * (1 + Decimal(Decimal(NRATE))/N)**(N*YEARS)))
     LOAN = '${:0,d}'.format(LOAN)
-    STOTAL = TOTAL < 0 ? None : '${:0,d}'.format(TOTAL)
+    STOTAL = None if TOTAL < 0 else '${:0,d}'.format(TOTAL)
     REPORT += '       Total:          ' + STOTAL.rjust(11)
 
 print REPORT
