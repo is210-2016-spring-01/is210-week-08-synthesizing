@@ -3,6 +3,7 @@
 """Loans are great for students!!"""
 
 from decimal import Decimal
+
 NAME = raw_input('What is your name? ')
 LOAN = raw_input('What is the principal of the loan? ')
 YEARS = raw_input('How many years is this loan being borrowed? ')
@@ -12,9 +13,10 @@ LOAN = int(LOAN)
 YEARS = int(YEARS)
 RATE = None
 TOTAL = None
+N = 12
 
 if 0 < LOAN <= 199999:
-    if YEARS <= 15:
+    if 0 < YEARS <= 15:
         if QUALIFIED == 'Yes' or QUALIFIED == 'y':
             RATE = 0.0363
         else:
@@ -23,20 +25,18 @@ if 0 < LOAN <= 199999:
         if QUALIFIED == 'Yes' or QUALIFIED == 'y':
             RATE = 0.0404
         else:
-            RATE = '0.0498'
+            RATE = 0.0498
     elif 21 <= YEARS <= 30:
         if QUALIFIED == 'Yes' or QUALIFIED == 'y':
             RATE = 0.0577
         else:
             RATE = 0.0639
-    else:
-        RATE = None
 elif 2000000 <= LOAN <= 999999:
     if YEARS <= 15:
         if QUALIFIED == 'Yes' or QUALIFIED == 'y':
             RATE = 0.0302
         else:
-            RATE = 0.0398
+            RATE = 0.0398'
     elif 16 <= YEARS <= 20:
         if QUALIFIED == 'Yes' or QUALIFIED == 'y':
             RATE = 0.0327
@@ -45,77 +45,27 @@ elif 2000000 <= LOAN <= 999999:
     elif 21 <= YEARS <= 30:
         if QUALIFIED == 'Yes' or QUALIFIED == 'y':
             RATE = 0.0466
-        else:
-            RATE = None
-    else:
-        RATE = None            
 elif LOAN >= 1000000:
     if YEARS <= 15:
         if QUALIFIED == 'Yes' or QUALIFIED == 'y':
             RATE = 0.0205
-        else:
-            RATE = None
     elif 16 <= YEARS <= 20:
         if QUALIFIED == 'Yes' or QUALIFIED == 'y':
             RATE = 0.0262
-        RATE = None
-    else:
-        RATE = None
-else: 
-    RATE = None
-#elif:
-#    LOAN <= 0:
-#    RATE = None
-#    TOTAL = None
     
-Dec = Decimal(RATE)
-NRATE = '{0:f}'.format(Dec)
-N = 12
 if RATE is not None:
-    TOTAL = int(round(LOAN * (1 + Decimal(Decimal(NRATE))/N)**(N*YEARS)))
-    #else:
-    #return RATE
-    
-TOTAL = int(TOTAL)
-LOAN = '{:0,d}'.format(LOAN)
-STOTAL = '{:0,d}'.format(TOTAL)
+    Dec = Decimal(RATE)
+    NRATE = '{0:f}'.format(Dec)
+    TOTAL = int(LOAN * (1 + RATE/N)**(N*YEARS))
+    #TOTAL = int(round(LOAN * (1 + Decimal(Decimal(NRATE))/N)**(N*YEARS)))
+    LOAN = '{:0,d}'.format(LOAN)
+    STOTAL = '{:0,d}'.format(TOTAL)
+    REPORT = ('Loan report for: ' + NAME + ' \n'
+              + '-------------------------------------------------' + '\n'
+              + '       Principal:      ' + str(LOAN).rjust(20) + '\n'
+              + '       Duration:       ' + str(YEARS).rjust(20) + '\n'
+              + '       Pre-Qualified?: ' + QUALIFIED.rjust(20) + '\n'
+              + '\n'
+              + '       Total:          ' + STOTAL.rjust(20))
+    print REPORT
 
-REPORT = ('Loan report for: ' + NAME + ' \n'
-          + '-------------------------------------------------' + '\n'
-          + '       Principal:      ' + str(LOAN).rjust(21) + '\n'
-          + '       Duration:      ' + str(YEARS).rjust(22) + '\n'
-          + '       Pre-Qualified?:      ' + QUALIFIED.rjust(16) + '\n'
-          + '\n'
-          + '       Total:      ' + STOTAL.rjust(25))
-print REPORT
-# if RATE is not None:
-   # RATE = decimal.Decimal(RATE)
-   # TOTAL = int(LOAN * (1 + RATE/N)**(N*YEARS))
-# else:
-    # TOTAL = None
-
-# LINE1 = 'Principal:'
-# LINE2 = 'Duration:'
-# LINE3 = 'Pre-Qualified?:'
-# REPORT = ('Loan report for: {0} \n'
-          # + '-------------------------------------------------' + '\n'
-          # + '       Principal:      ' + '${1}'.rjust(21) + '\n'
-          # + '       Duration:             ' + '{2}'.rjust(20) + '\n'
-          # + '       Pre-Qualified?:        ' + '{3}'.rjust(20) + '\n'
-          # + '\n'
-          # + '       Total:                ' + '${4}'.rjust(15))
-
-
-# LOAN = '{:0,d}'.format(LOAN)
-# STOTAL = '{:0,d}'.format(TOTAL)
-#TOTAL = int(TOTAL)
-#LOAN = int(LOAN)
-
-# STOTAL = '{:0,d}'.format(TOTAL)
-# SLOAN = '{:0,d}'.format(LOAN)
-
-# LOAN = float(LOAN)
-# TOTAL = float(TOTAL)
-# YEARS = float(YEARS)
-
-#print REPORT.format(NAME, LOAN, YEARS, QUALIFIED, STOTAL)
