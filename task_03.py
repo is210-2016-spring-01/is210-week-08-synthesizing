@@ -55,8 +55,7 @@ elif LOAN >= 1000000:
     
 if RATE is not None:
     Dec = Decimal(RATE)
-    NRATE = '{0:f}'.format(Dec)
-    TOTAL = int(round(LOAN * (1 + RATE/N)**(N*YEARS)))
+    TOTAL = int(round(LOAN * (1 + Dec/N)**(N*YEARS)))
     #TOTAL = int(round(LOAN * (1 + Decimal(Decimal(NRATE))/N)**(N*YEARS)))
     LOAN = '${:0,d}'.format(LOAN)
     STOTAL = '${:0,d}'.format(TOTAL)
@@ -68,4 +67,3 @@ if RATE is not None:
               + '\n'
               + '       Total:          ' + STOTAL.rjust(11))
     print REPORT
-
