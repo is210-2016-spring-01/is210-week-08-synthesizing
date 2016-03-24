@@ -31,7 +31,7 @@ if 0 < LOAN <= 199999:
             RATE = '0.0577'
         else:
             RATE = '0.0639'
-elif 2000000 <= LOAN <= 999999:
+elif 200000 <= LOAN <= 999999:
     if YEARS <= 15:
         if QUALIFIED == 'Yes' or QUALIFIED == 'y':
             RATE = '0.0302'
@@ -64,7 +64,7 @@ if RATE is not None:
     TOTAL = int(round(LOAN * (1 + Dec/N)**(N*YEARS)))
     #TOTAL = int(round(LOAN * (1 + Decimal(Decimal(NRATE))/N)**(N*YEARS)))
     LOAN = '${:0,d}'.format(LOAN)
-    STOTAL = None if TOTAL < 0 else '${:0,d}'.format(TOTAL)
+    STOTAL = None if TOTAL < 0 ? None : '${:0,d}'.format(TOTAL)
     REPORT += '       Total:          ' + STOTAL.rjust(11)
 
 print REPORT
